@@ -1,0 +1,16 @@
+.groups {
+    max-width: 282px;
+    padding-top: 36px;
+    margin: 0 auto; 
+}
+@media screen and (min-width: 768px) {
+    .groups {
+        padding-top: 47px;
+        max-width: 581px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .groups {
+        max-width: 880px;
+    }
+}

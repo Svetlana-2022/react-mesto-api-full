@@ -1,0 +1,32 @@
+.profile__hover-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 0px;
+    object-fit: cover;
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.profile__hover-avatar:hover {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 0px;
+    object-fit: cover;
+    background-image: url(../../../images/avatar-hover.svg);
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-size: 26px;
+    background-position: center;
+    color: #000000;
+    z-index: 4;
+    opacity: 1;
+    position: absolute;
+}
+@media screen and (min-width: 768px) {
+    .profile__hover-avatar {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,13 @@
+.form__input_type_email {
+    width: 260px;
+    background-color: #000000;
+    border-bottom: 2px solid #CCCCCC;
+    margin: 67px auto 0 auto;
+    color: #fff;
+}
+@media screen and (min-width: 768px) {
+    .form__input_type_email {
+        width: 358px;
+        margin: 77px auto 0 auto;
+    }
+}

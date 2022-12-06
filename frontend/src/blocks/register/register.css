@@ -1,0 +1,15 @@
+.register {
+    padding-top: 40px;
+    padding-bottom: 77px;
+    margin: auto;
+    width: 260px;
+    color: #000;
+}
+@media screen and (min-width: 768px) {
+    .register {
+        padding-top: 60px;
+        padding-bottom: 112px;
+        width: 358px;
+        
+    }
+}

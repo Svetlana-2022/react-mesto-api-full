@@ -1,0 +1,26 @@
+.header__link {
+    /* width: 89px; */
+    height: 17px;
+    text-decoration: none;
+    /* margin-top: 34px; */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+    .header__link {
+        /* width: 114px; */
+        height: 22px;
+        /* margin-top: 51px; */
+
+        font-size: 18px;
+        line-height: 22px;
+        justify-self: end;
+        align-self: center;
+    }
+}

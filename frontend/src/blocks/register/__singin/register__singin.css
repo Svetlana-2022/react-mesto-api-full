@@ -1,0 +1,19 @@
+.register__singin {
+    width: 260px;
+    height: 17px;
+    margin-top: 20px;
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+    .register__singin {
+        width: 358px;
+        height: 17px;
+        margin-top: 15px;
+    }
+}

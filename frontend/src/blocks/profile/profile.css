@@ -1,0 +1,20 @@
+.profile {
+    max-width: 282px;
+    padding-top: 42px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px) {
+    .profile {
+        max-width: 581px;
+        grid-template-columns: 144px 1fr 150px;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .profile {
+        max-width: 880px;
+    }
+    
+}

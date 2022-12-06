@@ -1,0 +1,20 @@
+.profile__info {
+    max-width: 230px;
+    min-height: 54px;
+    transform: translate(18px, 0);
+    align-self: center;
+    justify-self: center;
+    display: grid;
+}
+@media screen and (min-width: 768px) {
+    .profile__info {
+        justify-self: start;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .profile__info {
+        max-width: 336px;
+        min-height: 73px;
+        grid-template-columns: max-content, 24px;
+    }
+}

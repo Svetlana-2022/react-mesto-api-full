@@ -1,0 +1,16 @@
+.form__submit-button_type_register {
+    margin-top: 173px;
+    width: 260px;
+    background-color: #fff;
+    color: #000;
+}
+.form__submit-button_type_register:hover {
+    background-color: #fff;
+    color: #000;
+}
+@media screen and (min-width: 768px) {
+    .form__submit-button_type_register {
+        margin-top: 216px;
+        width: 358px;
+    } 
+}

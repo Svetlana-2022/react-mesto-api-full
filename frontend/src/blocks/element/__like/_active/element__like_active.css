@@ -1,0 +1,7 @@
+.element__like_active {
+    background-image: url(../../../../images/Union.svg);
+    background-color: #fff;
+    width: 22px;
+    height: 19px;
+    border: none;
+}

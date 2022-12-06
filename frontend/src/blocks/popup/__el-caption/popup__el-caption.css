@@ -1,0 +1,10 @@
+.popup__el-caption {
+    width: 240px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    border: none;
+    position: absolute;
+    bottom: -33px;
+}

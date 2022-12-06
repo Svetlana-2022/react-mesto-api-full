@@ -1,0 +1,23 @@
+.header {
+    max-width: 100%;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+    .header {
+        max-width: 581px;
+        padding-top: 45px;
+        padding-bottom: 41px;
+        margin: 0 auto;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .header {
+        max-width: 880px;
+    }
+    
+}

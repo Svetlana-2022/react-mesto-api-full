@@ -1,0 +1,23 @@
+.groups__elements {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+    grid-auto-rows: 1fr;
+    list-style-type: none;
+    padding: 0;
+    z-index: 3;
+}
+@media screen and (min-width: 768px) {
+    .groups__elements {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 17px;
+        row-gap: 20px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .groups__elements {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

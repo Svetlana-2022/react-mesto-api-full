@@ -1,0 +1,15 @@
+.login {
+    padding-top: 40px;
+    /* padding-bottom: 77px; */
+    margin: 0 auto;
+    width: 260px;
+    color: #000;
+}
+@media screen and (min-width: 768px) {
+    .login {
+        padding-top: 60px;
+        /* padding-bottom: 112px; */
+        width: 358px;
+        
+    }
+}

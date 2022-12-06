@@ -1,0 +1,12 @@
+.profile__cover {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .profile__cover {
+        margin-bottom: 0;
+    }
+}

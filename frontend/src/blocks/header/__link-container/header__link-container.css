@@ -1,0 +1,20 @@
+.header__link-container {
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (min-width: 768px) {
+    .header__link-container {
+        /* width: 114px; */
+        height: 22px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
