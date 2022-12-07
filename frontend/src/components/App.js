@@ -41,17 +41,6 @@ function App() {
     useEffect(() => {
         tokenCheck();
     }, [])
-    // useEffect(() => {
-    //     if(loggedIn) {
-    //         api.getInitialCards().then((resCard) => {
-    //             console.log(resCard, '---card');
-    //             setCards(resCard);
-    //         }).catch(err => console.log(err));
-    //         api.getUserInfo().then((resUser) => {
-    //             setCurrentUser(resUser);
-    //         }).catch(err => console.log(err));
-    //     }
-    // }, [loggedIn])
 
     function handleCardLike(card) {
         // Снова проверяем, есть ли уже лайк на этой карточке
