@@ -8,14 +8,15 @@ const { createUser, login } = require('./controllers/user');
 const { auth } = require('./middlewares/auth');
 const NotFoundError = require('./errors/NotFoundError');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+require('dotenv').config();
 
-const { PORT = 3000 } = process.env;
+const { DB_URL, PORT } = process.env;
 
 const app = express();
 
 const INTERNAL_SERVER_ERROR = 500;
 
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
+mongoose.connect(DB_URL);
 
 app.use(cors({
   origin: '*',
