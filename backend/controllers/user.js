@@ -8,6 +8,8 @@ const ConflictError = require('../errors/ConflictError');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const User = require('../models/user');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 const CREATED = 201;
 const UniqueErrorCode = 11000;
 
@@ -73,7 +75,7 @@ module.exports.login = (req, res, next) => {
   return User.findUserByCredentials({ email, password })
     .then((user) => {
       console.log(user, '--logUs');
-      const token = jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
       res.send({ token });
       console.log({ token }, '---logToken');
     })
