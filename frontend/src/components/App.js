@@ -8,7 +8,6 @@ import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import ImagePopup from './ImagePopup';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-// import { UserDataContext } from '../contexts/UserDataContext';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
