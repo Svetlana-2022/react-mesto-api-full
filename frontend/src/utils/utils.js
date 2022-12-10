@@ -1,7 +1,5 @@
 const config = {
-    // url: 'https://student.svetlana.nomoredomains.club',
-    // url: 'https://api.student.svetlana.nomoredomains.club',
-    url: 'http://localhost:3000',
+  url: 'https://api.student.svetlana.nomoredomains.club',
     headers: {
       authorization: '',
       'Content-Type': 'application/json'
