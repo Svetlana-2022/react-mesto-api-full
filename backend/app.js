@@ -1,4 +1,4 @@
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -11,7 +11,12 @@ const { auth } = require('./middlewares/auth');
 const NotFoundError = require('./errors/NotFoundError');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-console.log(process.env.NODE_ENV);
+const { NODE_ENV } = process.env;
+
+const config = dotenv.config({
+  path: NODE_ENV === 'production' ? '.env' : '.env.common',
+}).parsed;
+console.log(config);
 
 const { PORT = 3000 } = process.env;
 
@@ -21,6 +26,7 @@ const INTERNAL_SERVER_ERROR = 500;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
+app.set('config', config);
 app.use(cors({
   origin: '*',
   allowedHeaders: ['Content-Type', 'Authorization'],
