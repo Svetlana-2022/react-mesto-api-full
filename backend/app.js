@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+// const cors = require('cors');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const { celebrateBodyUser, celebrateBodyAuth } = require('./validators/users');
@@ -26,11 +26,37 @@ const INTERNAL_SERVER_ERROR = 500;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
+const allowedCors = [
+  'https://api.student.svetlana.nomoredomains.club',
+  'https://student.svetlana.nomoredomains.club',
+  'localhost:3000',
+];
+
+app.use((req, res, next) => {
+  const { origin } = req.headers; // Сохраняем источник запроса в переменную origin
+  // проверяем, что источник запроса есть среди разрешённых
+  if (allowedCors.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+  const { method } = req;
+  const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';
+
+  const requestHeaders = req.headers['access-control-request-headers'];
+
+  if (method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
+    res.header('Access-Control-Allow-Headers', requestHeaders);
+    res.end();
+  }
+
+  next();
+});
+
 app.set('config', config);
-app.use(cors({
-  origin: '*',
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+// app.use(cors({
+//   origin: '*',
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+// }));
 app.use(bodyParser.json());
 app.use(requestLogger); // подключаем логгер запросов
 app.get('/crash-test', () => {
