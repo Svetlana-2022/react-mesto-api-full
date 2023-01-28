@@ -75,6 +75,7 @@ export class Api {
         headers: this._headers
       }).then(this._getResponseData);
     }
+    //метод регистрации
     register = (password, email) => {
       return fetch(`${this._url}/signup`, {
           method: 'POST',
@@ -86,6 +87,7 @@ export class Api {
       })
       .then(this._getResponseData);
     };
+    //метод авторизации
     authorize = (password, email) => {
       console.log(password, email);
       return fetch(`${this._url}/signin`, {
